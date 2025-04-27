@@ -32,7 +32,7 @@ jobs:
           LATEST_TAG=$(curl -s https://api.github.com/repos/bia-pain-bache/BPB-Worker-Panel/releases/latest | grep "tag_name" | cut -d '"' -f 4)
           wget -q -O "/worker.zip" https://github.com/bia-pain-bache/BPB-Worker-Panel/releases/download/$LATEST_TAG/worker.zip
           unzip -o -d "/" "/worker.zip"
-          rm -f "/worker.zip"
+         
 
       - name: 提交更改
         uses: stefanzweifel/git-auto-commit-action@v5
